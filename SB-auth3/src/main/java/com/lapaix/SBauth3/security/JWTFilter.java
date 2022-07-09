@@ -24,7 +24,7 @@ import java.util.concurrent.Semaphore;
  *    "SecurityContextHolder"
  * */
 @Component
-public class JWTFilter implements OncePerRequestFilter {
+public class JWTFilter extends OncePerRequestFilter {
     @Autowired
 
     private MyUserDetailsService myUserDetailsService;
