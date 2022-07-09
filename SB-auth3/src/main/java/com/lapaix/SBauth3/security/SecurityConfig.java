@@ -15,6 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * By Gershom
+ *                Some of the important notes
+ *   1. The "auth" routes can be accessed by all users since register and login is for everyone
+ *   2. The "user" routes can be accessed by only authenticated users with the role "USER" which is set by MyUserDetailsService
+ *   3. Server will reject the requests as unauthorized when entry point is reached
+ *   4. JWTFilter is added to the filter chain in order to process the incoming requests
+ *   5. Creating a bean for password encoder
+ *   6. Exposing the bean of the authentication manager which will be used to run the authentication process in the "authController"
  * */
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
